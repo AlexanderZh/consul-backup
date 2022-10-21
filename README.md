@@ -24,13 +24,13 @@ Here is a brief instruction below:
 - cleanup existing backup folders:
 
 ```bash
-rm -rf _my-config-dir_
+rm -rf <my-config-dir>
 ```
 
 - run backup:
 
 ```bash
-bash backup-keys.sh http://<my-consul-addr>:<port>/v1 "<_my-config-dir_>" dump .
+bash backup-keys.sh http://<my-consul-addr>:<port>/v1 "<my-config-dir>" dump .
 ```
 
 Here **_my-config-dir_** indicates consul subfolder, all values are stored in separate files in local subfolders exactaly the same as in consul virtual folders. If you want to dump all consul keys leave _my-config-dir_ empty ("")
@@ -54,11 +54,11 @@ git pull origin master
 - run restore from each subfolder:
 
 ```bash
-bash backup-keys.sh http://<my-consul-addr>:<port>/v1 "<_my-config-dir_>" restore <_my-config-dir_>
+bash backup-keys.sh http://<my-consul-addr>:<port>/v1 "<my-config-dir>" restore <_my-config-dir_>
 ```
 
 ## 3. Batch cleanup selected keys in consul
 ```bash
-bash backup-keys.sh http://<my-consul-addr>:<port>/v1 "<_my-config-dir_>" clean
+bash backup-keys.sh http://<my-consul-addr>:<port>/v1 "<my-config-dir>" clean
 ```
 
